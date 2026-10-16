@@ -1,20 +1,55 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <title>Dan Knowlton</title>
-</head>
-<body>
- <div class="center">
-  [UNDER CONSTRUCTION]
-</div>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Daniel Knowlton</title>
+  <meta name="description" content="Daniel Knowlton, writer. A novel in progress.">
+  <link rel="canonical" href="https://danielknowlton.com/">
 
-<style>
-  .center {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-  }
-</style>
+  <meta property="og:title" content="Daniel Knowlton">
+  <meta property="og:description" content="A novel in progress.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://danielknowlton.com/">
+
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="home">
+
+  <!-- Menu button (top left) -->
+  <button class="menu-toggle" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="site-menu">
+    <span></span>
+    <span></span>
+    <span></span>
+  </button>
+
+  <!-- Sidebar menu -->
+  <nav class="sidebar" id="site-menu" aria-label="Main menu">
+    <ul>
+      <li><a href="index.html" aria-current="page">Home</a></li>
+      <li><a href="writings.html">Writings</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
+  <div class="menu-overlay"></div>
+
+  <!-- Static background image -->
+  <div class="bg" aria-hidden="true"></div>
+
+  <!-- Dims the artwork slightly while the paragraph is showing -->
+  <div class="shade" aria-hidden="true"></div>
+
+  <!-- First line of text: fades in, then fades out as you scroll -->
+  <p class="tagline">We have all bred such brave little gods within our red, beating hearts.</p>
+
+  <!-- Paragraph about the novel: fades in after the first line, then stays -->
+  <p class="synopsis"><em>Brave Little Gods</em> is a literary science fiction novel-in-progress about a long, generational journey from this world to the next. On board The Ring, the middle generations have no experience of Earth and won't live to see their destination, but against all odds, they build a home and life that is all their own. Along the way, they face death, commune with ghosts, birth new life, and redefine what humanity looks like when it's free from the earth and must survive in the lifeless black.</p>
+  <div class="scroll-cue" aria-hidden="true">Scroll</div>
+
+  <!-- Empty space that gives the page something to scroll through -->
+  <main class="scroll-space"></main>
+
+  <script src="script.js"></script>
 </body>
 </html>

@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Contact | Daniel Knowlton</title>
+  <meta name="description" content="Get in touch with Daniel Knowlton.">
+  <link rel="canonical" href="https://danielknowlton.com/contact.html">
+
+  <meta property="og:title" content="Contact | Daniel Knowlton">
+  <meta property="og:description" content="Get in touch with Daniel Knowlton.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://danielknowlton.com/contact.html">
+
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="page">
+
+  <!-- Menu button (top left) -->
+  <button class="menu-toggle" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="site-menu">
+    <span></span>
+    <span></span>
+    <span></span>
+  </button>
+
+  <!-- Sidebar menu -->
+  <nav class="sidebar" id="site-menu" aria-label="Main menu">
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="writings.html">Writings</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="contact.html" aria-current="page">Contact</a></li>
+    </ul>
+  </nav>
+  <div class="menu-overlay"></div>
+
+  <!-- Static background image (darkened on subpages so text is easy to read) -->
+  <div class="bg" aria-hidden="true"></div>
+
+  <main class="content">
+    <h1>Contact</h1>
+
+    <p>Send me a note using the form below.</p>
+
+    <!--
+      This form uses Web3Forms (web3forms.com), which emails each message to you.
+      1. Get a free access key at web3forms.com (enter your email, the key arrives in your inbox).
+      2. Replace YOUR_ACCESS_KEY_HERE below with that key.
+      The key is safe to leave in the page; your email address is not shown to visitors.
+    -->
+    <form id="contact-form" action="https://api.web3forms.com/submit" method="POST">
+      <input type="hidden" name="access_key" value="7f456020-65fb-4381-9c6b-acda6661f4be">
+      <input type="hidden" name="subject" value="New message from danielknowlton.com">
+      <input type="hidden" name="from_name" value="danielknowlton.com contact form">
+
+      <!-- Hidden spam trap: people never see this, but bots tend to fill it in -->
+      <input type="checkbox" name="botcheck" style="display: none;" tabindex="-1" autocomplete="off">
+
+      <div class="field">
+        <label for="name">Name</label>
+        <input type="text" id="name" name="name" autocomplete="name" required>
+      </div>
+
+      <div class="field">
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" autocomplete="email" required>
+      </div>
+
+      <div class="field">
+        <label for="message">Message</label>
+        <textarea id="message" name="message" rows="7" required></textarea>
+      </div>
+
+      <button type="submit" class="form-button">Send</button>
+      <p class="form-status" id="form-status" role="status" aria-live="polite"></p>
+    </form>
+  </main>
+
+  <script src="script.js"></script>
+  <script src="contact.js"></script>
+</body>
+</html>
