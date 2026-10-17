@@ -1,29 +1,44 @@
 (function () {
-  // ---------- Sidebar menu ----------
+
   var toggle = document.querySelector(".menu-toggle");
   var overlay = document.querySelector(".menu-overlay");
+  var menuLinks = document.querySelectorAll("#site-menu a");
 
-  function setMenu(open) {
+  function isOpen() {
+    return document.body.classList.contains("menu-open");
+  }
+
+  function setMenu(open, returnFocus) {
     document.body.classList.toggle("menu-open", open);
     toggle.setAttribute("aria-expanded", open ? "true" : "false");
     toggle.setAttribute("aria-label", open ? "Close menu" : "Open menu");
+
+    if (open && menuLinks.length) {
+      // Wait for the sidebar to become visible, then move focus into it.
+      window.setTimeout(function () {
+        if (isOpen()) {
+          menuLinks[0].focus();
+        }
+      }, 50);
+    } else if (!open && returnFocus) {
+      toggle.focus();
+    }
   }
 
   toggle.addEventListener("click", function () {
-    setMenu(!document.body.classList.contains("menu-open"));
+    setMenu(!isOpen(), true);
   });
 
   overlay.addEventListener("click", function () {
-    setMenu(false);
+    setMenu(false, false);
   });
 
   document.addEventListener("keydown", function (event) {
-    if (event.key === "Escape") {
-      setMenu(false);
+    if (event.key === "Escape" && isOpen()) {
+      setMenu(false, true);
     }
   });
 
-  // ---------- Tagline fades in and out with scrolling (home page only) ----------
   var tagline = document.querySelector(".tagline");
   var cue = document.querySelector(".scroll-cue");
   var synopsis = document.querySelector(".synopsis");
@@ -56,6 +71,8 @@
 
     if (synopsis) {
       synopsis.style.opacity = synopsisIn;
+      // Only let the text catch clicks and selection once it can be seen.
+      synopsis.classList.toggle("is-visible", synopsisIn > 0.5);
     }
 
     if (shade) {

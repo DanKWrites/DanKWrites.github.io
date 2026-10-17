@@ -3,30 +3,89 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Daniel Knowlton</title>
-  <meta name="description" content="Daniel Knowlton, writer. A novel in progress.">
+  <title>Daniel Knowlton | Fiction Writer</title>
+  <meta name="description" content="Daniel Knowlton is a fiction writer based in Frederick, MD. He is currently at work on his novel-in-progress, with the working title of Brave Little Gods.">
+  <meta name="author" content="Daniel Knowlton">
+  <meta name="robots" content="index, follow, max-image-preview:large">
+  <meta name="theme-color" content="#0e081e">
   <link rel="canonical" href="https://danielknowlton.com/">
 
-  <meta property="og:title" content="Daniel Knowlton">
-  <meta property="og:description" content="A novel in progress.">
+  <link rel="icon" href="/favicon.ico" sizes="48x48">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+  <link rel="manifest" href="/site.webmanifest">
+
+  <meta property="og:title" content="Daniel Knowlton | Fiction Writer">
+  <meta property="og:description" content="Fiction writer Daniel Knowlton is at work on Brave Little Gods, a literary science fiction novel in progress.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://danielknowlton.com/">
+  <meta property="og:site_name" content="Daniel Knowlton">
+  <meta property="og:locale" content="en_US">
+  <meta property="og:image" content="https://danielknowlton.com/og-image.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Illustration of a ring-shaped space habitat drifting above sunlit clouds at dusk.">
 
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Daniel Knowlton | Fiction Writer">
+  <meta name="twitter:description" content="Fiction writer Daniel Knowlton is at work on Brave Little Gods, a literary science fiction novel in progress.">
+  <meta name="twitter:image" content="https://danielknowlton.com/og-image.jpg">
+  <meta name="twitter:image:alt" content="Illustration of a ring-shaped space habitat drifting above sunlit clouds at dusk.">
+
+  <link rel="preload" href="fonts/jost-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="fonts/newsreader-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="images/background-1600.webp" as="image" type="image/webp" media="(max-width: 800px)" fetchpriority="high">
+  <link rel="preload" href="images/background-1920.webp" as="image" type="image/webp" media="(min-width: 801px) and (max-width: 1920px)" fetchpriority="high">
+  <link rel="preload" href="images/background-2560.webp" as="image" type="image/webp" media="(min-width: 1921px)" fetchpriority="high">
   <link rel="stylesheet" href="style.css">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "WebSite",
+        "@id": "https://danielknowlton.com/#website",
+        "url": "https://danielknowlton.com/",
+        "name": "Daniel Knowlton",
+        "inLanguage": "en-US",
+        "publisher": {
+          "@id": "https://danielknowlton.com/#person"
+        }
+      },
+      {
+        "@type": "Person",
+        "@id": "https://danielknowlton.com/#person",
+        "name": "Daniel Knowlton",
+        "url": "https://danielknowlton.com/",
+        "jobTitle": "Fiction writer",
+        "description": "Fiction writer based in Frederick, MD, at work on the literary science fiction novel Brave Little Gods.",
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Frederick",
+          "addressRegion": "MD",
+          "addressCountry": "US"
+        },
+        "alumniOf": {
+          "@type": "CollegeOrUniversity",
+          "name": "University of Maryland"
+        }
+      }
+    ]
+  }
+  </script>
 </head>
 <body class="home">
 
-  <!-- Menu button (top left) -->
   <button class="menu-toggle" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="site-menu">
     <span></span>
     <span></span>
     <span></span>
   </button>
 
-  <!-- Sidebar menu -->
   <nav class="sidebar" id="site-menu" aria-label="Main menu">
     <ul>
-      <li><a href="index.html" aria-current="page">Home</a></li>
+      <li><a href="/" aria-current="page">Home</a></li>
       <li><a href="writings.html">Writings</a></li>
       <li><a href="about.html">About</a></li>
       <li><a href="contact.html">Contact</a></li>
@@ -34,21 +93,20 @@
   </nav>
   <div class="menu-overlay"></div>
 
-  <!-- Static background image -->
   <div class="bg" aria-hidden="true"></div>
 
-  <!-- Dims the artwork slightly while the paragraph is showing -->
   <div class="shade" aria-hidden="true"></div>
 
-  <!-- First line of text: fades in, then fades out as you scroll -->
-  <p class="tagline">We have all bred such brave little gods within our red, beating hearts.</p>
+  <main>
+    <h1 class="visually-hidden">Daniel Knowlton, Fiction Writer</h1>
 
-  <!-- Paragraph about the novel: fades in after the first line, then stays -->
-  <p class="synopsis"><em>Brave Little Gods</em> is a literary science fiction novel-in-progress about a long, generational journey from this world to the next. On board The Ring, the middle generations have no experience of Earth and won't live to see their destination, but against all odds, they build a home and life that is all their own. Along the way, they face death, commune with ghosts, birth new life, and redefine what humanity looks like when it's free from the earth and must survive in the lifeless black.</p>
-  <div class="scroll-cue" aria-hidden="true">Scroll</div>
+    <p class="tagline">We have all bred such brave little gods within our red, beating hearts.</p>
 
-  <!-- Empty space that gives the page something to scroll through -->
-  <main class="scroll-space"></main>
+    <p class="synopsis"><em>Brave Little Gods</em> is a literary science fiction novel-in-progress about a long, generational journey from this world to the next. On board The Ring, the middle generations have no experience of Earth and won't live to see their destination, but against all odds, they build a home and life that is all their own. Along the way, they face death, commune with ghosts, birth new life, and redefine what humanity looks like when it's free from the earth and must survive in the lifeless black.</p>
+    <div class="scroll-cue" aria-hidden="true">Scroll</div>
+
+    <div class="scroll-space" aria-hidden="true"></div>
+  </main>
 
   <script src="script.js"></script>
 </body>

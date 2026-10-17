@@ -4,29 +4,52 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Contact | Daniel Knowlton</title>
-  <meta name="description" content="Get in touch with Daniel Knowlton.">
+  <meta name="description" content="Daniel Knowlton is a fiction writer based in Frederick, MD. Get in touch with him here for questions and comments.">
+  <meta name="author" content="Daniel Knowlton">
+  <meta name="robots" content="index, follow, max-image-preview:large">
+  <meta name="theme-color" content="#0e081e">
   <link rel="canonical" href="https://danielknowlton.com/contact.html">
+
+  <link rel="icon" href="/favicon.ico" sizes="48x48">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+  <link rel="manifest" href="/site.webmanifest">
 
   <meta property="og:title" content="Contact | Daniel Knowlton">
   <meta property="og:description" content="Get in touch with Daniel Knowlton.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://danielknowlton.com/contact.html">
+  <meta property="og:site_name" content="Daniel Knowlton">
+  <meta property="og:locale" content="en_US">
+  <meta property="og:image" content="https://danielknowlton.com/og-image.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Illustration of a ring-shaped space habitat drifting above sunlit clouds at dusk.">
 
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Contact | Daniel Knowlton">
+  <meta name="twitter:description" content="Get in touch with Daniel Knowlton.">
+  <meta name="twitter:image" content="https://danielknowlton.com/og-image.jpg">
+  <meta name="twitter:image:alt" content="Illustration of a ring-shaped space habitat drifting above sunlit clouds at dusk.">
+
+  <link rel="preload" href="fonts/jost-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="fonts/newsreader-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="images/background-1600.webp" as="image" type="image/webp" media="(max-width: 800px)" fetchpriority="high">
+  <link rel="preload" href="images/background-1920.webp" as="image" type="image/webp" media="(min-width: 801px) and (max-width: 1920px)" fetchpriority="high">
+  <link rel="preload" href="images/background-2560.webp" as="image" type="image/webp" media="(min-width: 1921px)" fetchpriority="high">
   <link rel="stylesheet" href="style.css">
 </head>
 <body class="page">
 
-  <!-- Menu button (top left) -->
   <button class="menu-toggle" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="site-menu">
     <span></span>
     <span></span>
     <span></span>
   </button>
 
-  <!-- Sidebar menu -->
   <nav class="sidebar" id="site-menu" aria-label="Main menu">
     <ul>
-      <li><a href="index.html">Home</a></li>
+      <li><a href="/">Home</a></li>
       <li><a href="writings.html">Writings</a></li>
       <li><a href="about.html">About</a></li>
       <li><a href="contact.html" aria-current="page">Contact</a></li>
@@ -34,26 +57,17 @@
   </nav>
   <div class="menu-overlay"></div>
 
-  <!-- Static background image (darkened on subpages so text is easy to read) -->
   <div class="bg" aria-hidden="true"></div>
 
   <main class="content">
     <h1>Contact</h1>
 
-    <p>Send me a note using the form below.</p>
+    <p>Questions? Comments? Drop me a line with the form below!</p>
 
-    <!--
-      This form uses Web3Forms (web3forms.com), which emails each message to you.
-      1. Get a free access key at web3forms.com (enter your email, the key arrives in your inbox).
-      2. Replace YOUR_ACCESS_KEY_HERE below with that key.
-      The key is safe to leave in the page; your email address is not shown to visitors.
-    -->
     <form id="contact-form" action="https://api.web3forms.com/submit" method="POST">
       <input type="hidden" name="access_key" value="7f456020-65fb-4381-9c6b-acda6661f4be">
       <input type="hidden" name="subject" value="New message from danielknowlton.com">
       <input type="hidden" name="from_name" value="danielknowlton.com contact form">
-
-      <!-- Hidden spam trap: people never see this, but bots tend to fill it in -->
       <input type="checkbox" name="botcheck" style="display: none;" tabindex="-1" autocomplete="off">
 
       <div class="field">

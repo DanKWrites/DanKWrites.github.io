@@ -1,5 +1,3 @@
-// Sends the contact form in the background so visitors stay on your site
-// (without this file, the form still works, but visitors land on the form service's own page).
 (function () {
   var form = document.getElementById("contact-form");
   var status = document.getElementById("form-status");
