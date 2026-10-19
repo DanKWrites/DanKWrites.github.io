@@ -14,7 +14,7 @@
     toggle.setAttribute("aria-label", open ? "Close menu" : "Open menu");
 
     if (open && menuLinks.length) {
-      // Wait for the sidebar to become visible, then move focus into it.
+      
       window.setTimeout(function () {
         if (isOpen()) {
           menuLinks[0].focus();
@@ -52,7 +52,7 @@
     return Math.min(1, Math.max(0, value));
   }
 
-  // 0 before "start", 1 after "end", smooth in between
+  
   function ramp(progress, start, end) {
     return clamp((progress - start) / (end - start));
   }
@@ -61,8 +61,6 @@
     var maxScroll = document.documentElement.scrollHeight - window.innerHeight;
     var progress = maxScroll > 0 ? window.scrollY / maxScroll : 0;
 
-    // Timeline, as a share of the total scroll (0 = top, 1 = bottom).
-    // Change these numbers to speed up or slow down each fade.
     var taglineIn = ramp(progress, 0.04, 0.14);
     var taglineOut = ramp(progress, 0.30, 0.42);
     var synopsisIn = ramp(progress, 0.46, 0.58);
@@ -71,7 +69,7 @@
 
     if (synopsis) {
       synopsis.style.opacity = synopsisIn;
-      // Only let the text catch clicks and selection once it can be seen.
+      
       synopsis.classList.toggle("is-visible", synopsisIn > 0.5);
     }
 
